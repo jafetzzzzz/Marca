@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Reviews</title>
+	<link rel="stylesheet" href="reseña.css">
+	<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/5260/5260498.png" type="icono">
+</head>
+<body>
+    <header>
+        <h1>Reseñas de Juegos</h1>
+        <p>¡Comparte tus pensamientos sobre tus juegos favoritos!</p>
+    </header>
+	 <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="reseña.html">Reseñas</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+    <main>
+     
+        <section class="review-form">
+            <h2>Envia tu reseña</h2>
+            <form id="reviewForm">
+                <label for="gameTitle">Titulo del Juego:</label>
+                <input type="text" id="gameTitle" name="gameTitle" placeholder="Introduce el titulo del juego" required>
+
+                <label for="reviewText">Tu review:</label>
+                <textarea id="reviewText" name="reviewText" placeholder="Escribe tu reseña aqui.." required></textarea>
+
+                <label for="rating">Clasificacion:</label>
+                <select id="rating" name="rating" required>
+                    <option value="5">5 - Excelente</option>
+                    <option value="4">4 - Estupendo</option>
+                    <option value="3">3 - Bueno</option>
+                    <option value="2">2 - Justo</option>
+                    <option value="1">1 - Pobre</option>
+                </select>
+
+                <button type="submit">Enviar Reseña</button>
+            </form>
+        </section>
+
+   
+        <section class="reviews">
+            <h2>Ultimas Reseñas</h2>
+            <div id="reviewList">
+                
+                <p></p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Game Reviews © 2024</p>
+    </footer>
+
+   <script>
+    const form = document.getElementById('reviewForm');
+    const reviewList = document.getElementById('reviewList');
+
+ 
+    function loadReviews() {
+        const savedReviews = JSON.parse(localStorage.getItem('reviews')) || [];
+        savedReviews.forEach(review => addReviewToList(review));
+    }
+
+    
+    function addReviewToList(review) {
+        const reviewItem = document.createElement('div');
+        reviewItem.classList.add('review-item');
+        reviewItem.innerHTML = `
+            <h3>${review.gameTitle} - Rating: ${review.rating}/5</h3>
+            <p>${review.reviewText}</p>
+        `;
+        reviewList.appendChild(reviewItem);
+    }
+
+    
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+       
+        const gameTitle = document.getElementById('gameTitle').value;
+        const reviewText = document.getElementById('reviewText').value;
+        const rating = document.getElementById('rating').value;
+
+        
+        const newReview = { gameTitle, reviewText, rating };
+
+        const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+        reviews.push(newReview);
+        localStorage.setItem('reviews', JSON.stringify(reviews));
+
+        
+        addReviewToList(newReview);
+
+
+        form.reset();
+    });
+
+
+    window.addEventListener('DOMContentLoaded', loadReviews);
+</script>
+
+</body>
+</html>

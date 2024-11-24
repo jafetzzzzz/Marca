@@ -1,0 +1,137 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e2f;
+    color: #eaeaea;
+}
+
+header {
+    background: #4c1a98;
+    color: #fff;
+    padding: 20px 10px;
+    text-align: center;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+
+    
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 10px 15px;
+    display: block;
+    border-radius: 20px;
+}
+
+nav ul li a:hover {
+    background-color: #800000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+.review-form h2, .reviews h2 {
+    color: #ffc107;
+    border-bottom: 2px solid #ffc107;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+form {
+    background: #2e2e3f;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+form input, form textarea, form select, form button {
+    width: 100%;
+    margin-top: 5px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+form input, form textarea, form select {
+    background: #444;
+    color: #fff;
+}
+
+form button {
+    background: #ffc107;
+    color: #1e1e2f;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+form button:hover {
+    background: #e0a800;
+}
+
+#reviewList {
+    background: #2e2e3f;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.review-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #3e3e50;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.review-item h3 {
+    margin: 0;
+    color: #ffc107;
+}
+
+.review-item p {
+    margin: 10px 0 0;
+    color: #eaeaea;
+}
+
+footer {
+    text-align: center;
+    background: #1a1a2a;
+    padding: 10px;
+    color: #eaeaea;
+}
+ 

@@ -1,0 +1,223 @@
+body {
+    font-family: Didot, serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 10;
+    background-color: #FFFFF0;
+    color: #000000;
+	justify-content: space-between;
+	text-align: center;
+	background-size: cover;
+}
+header {
+    background-color: #000000; 
+    color: WHITE; 
+    text-align: center-right; 
+    padding: 145px 20px; 
+    box-shadow: 0 8px 50px rgba(0, 0, 0, 0.5); 
+	justify-content: center;
+	background-image: url("https://i.pinimg.com/originals/3f/87/f9/3f87f9d3e3967cf72092ec8717f55bda.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top;
+}
+
+header h1 {
+    font-size: 6.5em;
+    font-weight: bold; 
+    margin-bottom: 10px; 
+    text-transform: uppercase;
+	animation: bounce; 
+    animation-duration: 1s;
+}
+
+header p {
+    font-size: 2.0em; 
+    font-weight: lighter;
+    margin-top: 40px; 
+    letter-spacing: 5px; 
+	color: white;
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;  
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 10px 15px;
+    display: block;
+    border-radius: 20px;
+}
+
+nav ul li a:hover {
+    background-color: #800000;
+}
+
+
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 35px;
+	background-size: cover;
+}
+
+.articles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+article {
+    flex: 1 1 calc(33.333% - 20px);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    background-color: #FFF;
+    border-radius: 10px; 
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+	background-size: cover;
+
+}
+article h1 {
+    font-size: 2.5em;
+    margin: 0;
+    padding: 15px;
+    background-color: #282c34;
+    color: white;
+    border-radius: 10px 10px 0 0; 
+	justify-content: center;
+}
+
+article h2 {
+    font-size: 1.5em;
+    margin: 0;
+    padding: 10px;
+    background-color: #800000;
+    color: white;
+    border-radius: 10px 10px 0 0; 
+	justify-content: center;
+}
+
+article img {
+    width: 100%;
+    height: auto;
+    border-radius: 0 0 15px 15px;
+	
+}
+
+article p {
+    padding: 10px;
+    flex-grow: 1;
+}
+
+.read-more {
+    text-decoration: none;
+    color: #000000;
+    padding: 10px;
+    display: block;
+    text-align: center;
+    background-color: #A9A9A9;
+    font-weight: bold;
+    border-top: 2px solid #ddd;
+    border-radius: 0 0 10 10px; 
+}
+
+.read-more:hover {
+    background-color: #F5FFFA;
+}
+
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #282c34;
+    color: white;
+    border-radius: 2px; 
+}
+
+footer .social-media a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+}
+
+footer .social-media a:hover {
+    text-decoration: underline;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #A52A2A; 
+    color: white; 
+}
+
+tr:hover {
+    background-color: #f1f1f1; 
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #ffffff; 
+}.videos {
+    text-align: center;
+}
+
+.videos h2 {
+    margin-bottom: 20px;
+    color: #00000;
+}
+
+.video-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.video iframe {
+    width: 800px;
+    height: 400px;
+    border: 3px solid #2c2f33;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+a {
+	color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+	margin: 2;
+	padding: 20px;	
+}
+a:hover {
+    text-decoration: underline;
+`	padding: 20px;
+ }
